@@ -1,3 +1,4 @@
+#Angel Damian Malvaiz González
 def contar(palabras):
     ocurrencias = {}
     for palabra in palabras:
