@@ -1,0 +1,16 @@
+### Ejercicios de Python con Colecciones
+
+1. **Contar Ocurrencias de Elementos**  
+   **Colección**: Lista  
+   **Descripción**: Dada una lista de palabras, crea una función que devuelva un diccionario con la cantidad de veces que aparece cada palabra.  
+def contar(palabras):
+    ocurrencias = {}
+    for palabra in palabras:
+        if palabra in ocurrencias:
+            ocurrencias[palabra] += 1
+        else:
+            ocurrencias[palabra] = 1
+    return ocurrencias
+
+palabras = ["python", "java", "python", "c++"]
+print(contar(palabras)) 
