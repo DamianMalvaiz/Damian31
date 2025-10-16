@@ -1,0 +1,44 @@
+# requirements-media.txt
+# Dependencias específicas para funcionalidades multimedia
+# ========================================================
+
+# Procesamiento de imágenes
+Pillow>=10.0.0                    # Procesamiento de imágenes
+opencv-python>=4.8.0              # Computer vision y procesamiento avanzado
+imageio>=2.31.0                   # Lectura/escritura de imágenes
+
+# Procesamiento de video
+moviepy>=1.0.3                    # Edición y procesamiento de video
+ffmpeg-python>=0.2.0              # Wrapper de FFmpeg para Python
+
+# Procesamiento de audio
+pydub>=0.25.1                     # Manipulación de audio
+librosa>=0.10.0                   # Análisis de audio y música
+soundfile>=0.12.1                 # Lectura/escritura de archivos de audio
+
+# APIs externas para contenido multimedia
+requests>=2.31.0                  # HTTP requests para APIs
+youtube-dl>=2021.12.17            # Descarga de videos de YouTube
+yt-dlp>=2023.7.6                  # Fork mejorado de youtube-dl
+google-api-python-client>=2.95.0  # Cliente oficial de Google APIs
+
+# Utilidades multimedia
+filetype>=1.2.0                   # Detección de tipos de archivo
+python-magic>=0.4.27              # Identificación de tipos MIME
+mutagen>=1.46.0                   # Metadata de archivos de audio
+
+# Compresión y optimización
+tinify>=1.6.0                     # API de TinyPNG para optimización de imágenes
+webp>=0.1.6                       # Soporte para formato WebP
+
+# Streaming y reproducción
+flask>=2.3.0                      # Para servir archivos multimedia (si necesario)
+flask-cors>=4.0.0                 # CORS para streaming
+
+# Análisis de contenido multimedia
+face-recognition>=1.3.0           # Reconocimiento facial (opcional)
+pytesseract>=0.3.10              # OCR para extraer texto de imágenes (opcional)
+
+# Utilidades adicionales
+tqdm>=4.65.0                      # Barras de progreso para procesamiento
+psutil>=5.9.0                     # Monitoreo de recursos del sistema

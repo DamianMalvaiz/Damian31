@@ -1,7 +1,36 @@
-﻿streamlit>=1.33
-pandas>=2.2
-numpy>=1.26
-pymongo>=4.6
-python-dotenv>=1.0
-# Si usas Spark local en otras partes del proyecto:
-pyspark>=3.5
+# requirements.txt
+# Dependencias principales del Media Management System
+# ===================================================
+
+# Framework web y UI
+streamlit>=1.33.0                 # Framework principal para UI
+streamlit-option-menu>=0.3.6      # Menús mejorados para Streamlit
+
+# Análisis de datos y matemáticas
+pandas>=2.2.0                     # Manipulación de datos
+numpy>=1.26.0                     # Operaciones numéricas
+scipy>=1.11.0                     # Funciones científicas adicionales
+
+# Base de datos
+pymongo>=4.6.0                    # Driver MongoDB
+gridfs>=0.0.1                     # GridFS para archivos grandes
+
+# Big Data (opcional)
+pyspark>=3.5.0                    # Apache Spark para big data
+
+# Configuración y variables de entorno
+python-dotenv>=1.0.0              # Manejo de variables de entorno
+pydantic>=2.0.0                   # Validación de datos y configuración
+
+# Utilidades generales
+python-dateutil>=2.8.2            # Parsing avanzado de fechas
+pytz>=2023.3                      # Zonas horarias
+hashlib3>=1.0.1                   # Funciones de hash adicionales
+
+# Logging y monitoreo
+loguru>=0.7.0                     # Logging avanzado y colorido
+
+# Desarrollo y testing (opcional)
+pytest>=7.4.0                     # Framework de testing
+black>=23.7.0                     # Formateador de código
+flake8>=6.0.0                     # Linter de código
