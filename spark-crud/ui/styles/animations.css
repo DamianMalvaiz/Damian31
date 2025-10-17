@@ -1,0 +1,487 @@
+/*
+================================================================================
+||                                                                              ||
+||                    ⚡ ANIMACIONES ÉPICAS Y BRUTALES ⚡                       ||
+||                                                                              ||
+||                     EFECTOS VISUALES DE OTRO MUNDO                          ||
+||                                                                              ||
+================================================================================
+*/
+
+/* ========== ANIMACIONES DE ENTRADA ========== */
+
+/* Fade In desde diferentes direcciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Zoom In épico */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide In desde los lados */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ========== ANIMACIONES DE HOVER BRUTALES ========== */
+
+/* Efecto de levitación */
+@keyframes levitate {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Rotación suave */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulso de escala */
+@keyframes scaleUp {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Shake épico */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* ========== EFECTOS DE BRILLO Y NEÓN ========== */
+
+/* Brillo pulsante */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(0, 212, 255, 0.8),
+            0 0 60px rgba(0, 212, 255, 0.4),
+            0 0 90px rgba(0, 212, 255, 0.2);
+    }
+}
+
+/* Efecto neón arcoíris */
+@keyframes neonRainbow {
+    0% {
+        box-shadow: 0 0 20px #ff0080;
+        border-color: #ff0080;
+    }
+    16.66% {
+        box-shadow: 0 0 20px #ff8000;
+        border-color: #ff8000;
+    }
+    33.33% {
+        box-shadow: 0 0 20px #ffff00;
+        border-color: #ffff00;
+    }
+    50% {
+        box-shadow: 0 0 20px #80ff00;
+        border-color: #80ff00;
+    }
+    66.66% {
+        box-shadow: 0 0 20px #00ff80;
+        border-color: #00ff80;
+    }
+    83.33% {
+        box-shadow: 0 0 20px #0080ff;
+        border-color: #0080ff;
+    }
+    100% {
+        box-shadow: 0 0 20px #8000ff;
+        border-color: #8000ff;
+    }
+}
+
+/* Texto brillante */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px rgba(0, 212, 255, 0.8),
+            0 0 20px rgba(0, 212, 255, 0.6),
+            0 0 30px rgba(0, 212, 255, 0.4);
+    }
+    50% {
+        text-shadow: 
+            0 0 20px rgba(185, 103, 219, 0.8),
+            0 0 40px rgba(185, 103, 219, 0.6),
+            0 0 60px rgba(185, 103, 219, 0.4);
+    }
+}
+
+/* ========== ANIMACIONES DE FONDO ========== */
+
+/* Gradiente animado */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ondas de energía */
+@keyframes energyWave {
+    0% {
+        background-position: 0% 0%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.7;
+    }
+    100% {
+        background-position: 0% 0%;
+        opacity: 0.3;
+    }
+}
+
+/* ========== ANIMACIONES DE LOADING ========== */
+
+/* Spinner épico */
+@keyframes epicSpin {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(185, 103, 219, 0.8);
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 0 0 20px rgba(255, 107, 157, 0.8);
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    }
+}
+
+/* Dots pulsantes */
+@keyframes dotPulse {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Barra de progreso épica */
+@keyframes progressGlow {
+    0% {
+        box-shadow: 
+            0 0 10px rgba(0, 212, 255, 0.6),
+            inset 0 0 10px rgba(0, 212, 255, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(0, 212, 255, 1),
+            inset 0 0 20px rgba(0, 212, 255, 0.6);
+    }
+    100% {
+        box-shadow: 
+            0 0 10px rgba(0, 212, 255, 0.6),
+            inset 0 0 10px rgba(0, 212, 255, 0.3);
+    }
+}
+
+/* ========== CLASES DE ANIMACIÓN APLICABLES ========== */
+
+/* Animaciones de entrada */
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeInDown {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.animate-fadeInLeft {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInRight {
+    animation: fadeInRight 0.6s ease-out;
+}
+
+.animate-zoomIn {
+    animation: zoomIn 0.5s ease-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.7s ease-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.7s ease-out;
+}
+
+/* Animaciones continuas */
+.animate-levitate {
+    animation: levitate 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.animate-pulse {
+    animation: scaleUp 2s ease-in-out infinite;
+}
+
+.animate-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Efectos de brillo */
+.animate-glow {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-neon-rainbow {
+    animation: neonRainbow 3s linear infinite;
+}
+
+.animate-text-glow {
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+/* Fondos animados */
+.animate-gradient {
+    background-size: 400% 400%;
+    animation: gradientShift 4s ease infinite;
+}
+
+.animate-energy-wave {
+    animation: energyWave 5s ease-in-out infinite;
+}
+
+/* Loading animations */
+.animate-epic-spin {
+    animation: epicSpin 1.5s linear infinite;
+}
+
+.animate-dot-pulse {
+    animation: dotPulse 1.4s ease-in-out infinite;
+}
+
+.animate-progress-glow {
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+/* ========== DELAYS PARA ANIMACIONES ESCALONADAS ========== */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* ========== ANIMACIONES ESPECÍFICAS PARA MULTIMEDIA ========== */
+
+/* Efecto de video play */
+@keyframes videoPlay {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.animate-video-play {
+    animation: videoPlay 0.3s ease-out;
+}
+
+/* Efecto de imagen zoom */
+@keyframes imageZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.animate-image-zoom:hover {
+    animation: imageZoom 0.3s ease-out forwards;
+}
+
+/* Efecto de audio wave */
+@keyframes audioWave {
+    0%, 100% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+.animate-audio-wave {
+    animation: audioWave 0.8s ease-in-out infinite;
+}
+
+/* ========== TRANSICIONES SUAVES ========== */
+.transition-all {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fast {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== EFECTOS DE HOVER ÉPICOS ========== */
+.hover-glow:hover {
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.6),
+        0 0 40px rgba(0, 212, 255, 0.4),
+        0 0 60px rgba(0, 212, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+.hover-neon:hover {
+    animation: neonRainbow 1s linear infinite;
+}
+
+/* ========== ANIMACIONES RESPONSIVAS ========== */
+@media (max-width: 768px) {
+    /* Reducir intensidad en móviles */
+    .animate-levitate {
+        animation: levitate 4s ease-in-out infinite;
+    }
+    
+    .animate-glow {
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+    
+    .hover-glow:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Desactivar animaciones para usuarios que prefieren menos movimiento */
+    .animate-levitate,
+    .animate-rotate,
+    .animate-pulse,
+    .animate-glow,
+    .animate-neon-rainbow,
+    .animate-text-glow,
+    .animate-gradient,
+    .animate-energy-wave {
+        animation: none;
+    }
+}

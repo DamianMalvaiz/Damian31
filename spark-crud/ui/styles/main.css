@@ -1,0 +1,423 @@
+/*
+================================================================================
+||                                                                              ||
+||                    🔥 BRUTAL DARK THEME CSS SYSTEM 🔥                       ||
+||                                                                              ||
+||                     MEDIA MANAGEMENT SYSTEM v2.0                            ||
+||                     DESIGNED FOR MAXIMUM IMPACT                              ||
+||                                                                              ||
+================================================================================
+*/
+
+/* ========== IMPORTAR FUENTES ÉPICAS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* ========== VARIABLES CSS BRUTALES ========== */
+:root {
+    /* 🎨 PALETA DE COLORES ÉPICA */
+    --color-bg-primary: #0a0a0f;           /* Negro profundo */
+    --color-bg-secondary: #1a1a2e;         /* Azul oscuro */
+    --color-bg-tertiary: #16213e;          /* Azul medio */
+    --color-bg-card: #1e1e2e;              /* Cards */
+    --color-bg-hover: #2a2a3e;             /* Hover states */
+    
+    /* 🌈 GRADIENTES BRUTALES */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --gradient-warning: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --gradient-danger: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    
+    /* ⚡ COLORES NEÓN */
+    --neon-blue: #00d4ff;
+    --neon-purple: #b967db;
+    --neon-pink: #ff6b9d;
+    --neon-green: #00ff88;
+    --neon-orange: #ff8c42;
+    --neon-red: #ff4757;
+    
+    /* 📝 TIPOGRAFÍA */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-display: 'Orbitron', 'Inter', sans-serif;
+    
+    /* 🎯 TEXTO */
+    --text-primary: #ffffff;
+    --text-secondary: #b8bcc8;
+    --text-muted: #6b7280;
+    --text-accent: var(--neon-blue);
+    
+    /* 🔲 BORDES Y SOMBRAS */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+    
+    /* ✨ SOMBRAS ÉPICAS */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.6);
+    
+    /* 🌟 SOMBRAS NEÓN */
+    --shadow-neon-blue: 0 0 20px rgba(0, 212, 255, 0.5);
+    --shadow-neon-purple: 0 0 20px rgba(185, 103, 219, 0.5);
+    --shadow-neon-pink: 0 0 20px rgba(255, 107, 157, 0.5);
+    --shadow-neon-green: 0 0 20px rgba(0, 255, 136, 0.5);
+    
+    /* ⚡ ANIMACIONES */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* 📐 ESPACIADO */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2rem;       /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+}
+
+/* ========== RESET Y BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+    /* Fondo animado épico */
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(185, 103, 219, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+    /* Animación de fondo */
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% {
+        background-position: 0% 0%, 100% 100%;
+    }
+    50% {
+        background-position: 100% 100%, 0% 0%;
+    }
+}
+
+/* ========== SCROLLBAR BRUTAL ========== */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--color-bg-secondary);
+    transition: all var(--transition-normal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-neon-blue);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--color-bg-secondary);
+}
+
+/* ========== STREAMLIT OVERRIDES BRUTALES ========== */
+
+/* Fondo principal */
+.stApp {
+    background: transparent !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(10, 10, 15, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Sidebar épico */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: var(--shadow-xl) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+[data-testid="stSidebar"] > div {
+    padding: var(--space-lg) !important;
+}
+
+/* Main content area */
+.main .block-container {
+    padding: var(--space-xl) var(--space-lg) !important;
+    max-width: none !important;
+}
+
+/* ========== TIPOGRAFÍA ÉPICA ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    
+    /* Efecto de texto brillante */
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(0, 212, 255, 0.8), 0 0 60px rgba(185, 103, 219, 0.3);
+    }
+}
+
+/* Párrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+/* Código */
+code {
+    font-family: var(--font-mono);
+    background: rgba(0, 0, 0, 0.4);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-sm);
+    color: var(--neon-green);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+pre {
+    background: var(--color-bg-card);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    box-shadow: var(--shadow-md);
+}
+
+/* ========== ENLACES BRUTALES ========== */
+a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-accent);
+    transition: width var(--transition-normal);
+}
+
+a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px currentColor;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* ========== SELECCIÓN DE TEXTO ========== */
+::selection {
+    background: rgba(0, 212, 255, 0.3);
+    color: var(--text-primary);
+}
+
+::-moz-selection {
+    background: rgba(0, 212, 255, 0.3);
+    color: var(--text-primary);
+}
+
+/* ========== EFECTOS ESPECIALES ========== */
+
+/* Efecto de partículas en el fondo */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Efecto de brillo en hover para elementos interactivos */
+.glow-effect {
+    transition: all var(--transition-normal);
+}
+
+.glow-effect:hover {
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.4),
+        0 0 40px rgba(0, 212, 255, 0.2),
+        0 0 60px rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Animación de pulso para elementos importantes */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Efecto de ondas */
+.wave-effect {
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(0, 212, 255, 0.1) 50%,
+        transparent 70%
+    );
+    background-size: 200% 200%;
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    :root {
+        --space-xl: 1.5rem;
+        --space-2xl: 2rem;
+        --space-3xl: 2.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .main .block-container {
+        padding: var(--space-lg) var(--space-md) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .main .block-container {
+        padding: var(--space-md) var(--space-sm) !important;
+    }
+}
+
+/* ========== MODO DE ALTO CONTRASTE ========== */
+@media (prefers-contrast: high) {
+    :root {
+        --text-primary: #ffffff;
+        --text-secondary: #e5e5e5;
+        --color-bg-primary: #000000;
+        --color-bg-secondary: #1a1a1a;
+    }
+}
+
+/* ========== MODO SIN ANIMACIONES ========== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
